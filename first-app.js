@@ -32,5 +32,6 @@ fs.writeFileSync('hello.txt', 'Hello from NodeJS');
     P => Print => Print output(result)
     L => Loop => Wait for new input
 
-
+    JavaScript is a weakly typed Language, object oriented Language, Versatile Language.
+    
 */
