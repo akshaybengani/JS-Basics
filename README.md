@@ -28,3 +28,26 @@ Previously we need to use ```node app.js``` to start we can still use that, but 
 
 * Since we didn't installed the nodemon globally so if we run ```nodemon app.js``` it will give error because the terminal will search nodemon globally and this will be a problem.
 * So we need to set our pakcage.json start file and add ```nodemon app.js``` by replacing ```node app.js``` and when we run ```npm start``` it will work.
+* Since to use Vscode Debugging with nodemon we need to install nodemon globally with ```-g``` flag.
+* So run ```npm install nodemon -g```
+
+## VSCode Debugging
+
+* In order to setup vscode autorun with debugging we need to add launch.json in .vscode folder and if not available in your directory create that manually.
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "console": "integratedTerminal"
+        }
+    ]
+}
+```
