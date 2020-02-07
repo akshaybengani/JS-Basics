@@ -1,0 +1,24 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "I am so excited for NodeJS, its always been my dream to learn this beautiful JavaScript Runtime, have no idea about it before totally fresh start.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshaybengani/NodeJS-FirstApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshaybengani/NodeJS-FirstApp/issues"
+  },
+  "homepage": "https://github.com/akshaybengani/NodeJS-FirstApp#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
