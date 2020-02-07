@@ -14,8 +14,7 @@ const requestHandler = (req, res) => {
         res.write('</html>');
         // Here if we dont use return then the server will process code furthur and that's what we dont want
         return res.end();
-    }
-    if (url === '/message' && method === 'POST') {
+    }    if (url === '/message' && method === 'POST') {
         const body = [];
         req.on('data', (chunk) => {
             console.log(chunk);
@@ -25,7 +24,7 @@ const requestHandler = (req, res) => {
             const parsedBody = Buffer.concat(body).toString();
             console.log(parsedBody);
             const message = parsedBody.split('=')[1];
-            fs.writeFile('message.txt', message, (err) => {
+            fs.writeFile('message.txt', message, () => {
                 res.statusCode = 302;
                 res.setHeader('Location', '/');
                 return res.end();
